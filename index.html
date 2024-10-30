@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Country Explorer</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Country Explorer</h1>
+            <div>
+                <input type="text" id="search" placeholder="Search for a country">
+                <button id="favorites-button">Favorites</button>
+            </div>
+        </header>
+
+        <div class="filters">
+            <select id="language-filter">
+                <option value="">Select Language</option>
+            </select>
+            <select id="region-filter">
+                <option value="">Select Region</option>
+            </select>
+        </div>
+
+        <!-- Country Cards Container -->
+        <div class="cards-container" id="country-list"></div>
+        <button id="show-more" style="display:none;">Show More</button>
+
+        <!-- Favorites Pop-Up Modal -->
+        <div id="favorites-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Your Favorites</h2>
+                <ul id="favorites-list"></ul>
+            </div>
+        </div>
+
+        <div id="country-detail" class="country-detail">
+            <span id="back-link" class="back-link">Back</span>
+            <img id="detail-flag" alt="Country Flag">
+            <h2 id="detail-name"></h2>
+            <p><strong>Top Level Domain:</strong> <span id="detail-domain"></span></p>
+            <p><strong>Capital:</strong> <span id="detail-capital"></span></p>
+            <p><strong>Region:</strong> <span id="detail-region"></span></p>
+            <p><strong>Population:</strong> <span id="detail-population"></span></p>
+            <p><strong>Area:</strong> <span id="detail-area"></span></p>
+            <p><strong>Languages:</strong> <span id="detail-languages"></span></p>
+            <button id="favorite-button">Add to Favorites</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
